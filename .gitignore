@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# Parcel Development Files
+/dist
+/.parcel-cache
+/public
+
 # testing
 /coverage
 
