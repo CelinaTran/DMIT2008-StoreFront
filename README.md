@@ -14,12 +14,12 @@ The dashboard will contain at least an app bar, side bar and a widget display ar
 
 ## References
 Images:
--https://hyperon.qodeinteractive.com/product/raining-coat/
--https://unsplash.com/photos/eAUE_FmclYE
--https://unsplash.com/photos/dG4Eb_oC5iM
--https://unsplash.com/photos/l_ZnbwOtYwU
--https://www.pexels.com/photo/woman-standing-near-graffiti-wall-1689724/
--https://www.shutterstock.com/image-vector/graffiti-spray-crown-icon-over-black-1998279665
+- https://hyperon.qodeinteractive.com/product/raining-coat/
+- https://unsplash.com/photos/eAUE_FmclYE
+- https://unsplash.com/photos/dG4Eb_oC5iM
+- https://unsplash.com/photos/l_ZnbwOtYwU
+- https://www.pexels.com/photo/woman-standing-near-graffiti-wall-1689724/
+- https://www.shutterstock.com/image-vector/graffiti-spray-crown-icon-over-black-1998279665
 
 
 Reference for layout:
