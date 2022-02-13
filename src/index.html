@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,115 @@
     <title>Liberty Status-Home</title>
 
     <link rel="icon" href="./img/graffiti-crown-grey.png" type="image/png">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script type="module" src="./index.js"></script>
 </head>
+
 <body>
-    <h1>Index</h1>
+    <header>
+        <nav class="upper-nav">
+            <div>
+                <a href="index.html">
+                    <img src="img/liberty-status-logo.jpg" alt="liberty-status-logo">
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            New Arrivals
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Womens
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Mens
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sale
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <img src="img/avtar-placeholder.jpg" alt="avtar-placeholder">
+            <img src="img/shopping-cart.png" alt="white shopping cart. Ref:https://icons8.com/icon/85383/shopping-cart">
+        </div>
+    </header>
+
+    <main>
+        <h1 class="hidden">Homepage</h1>
+        <section class="side-bar-crud">
+            <ul>
+                <li>
+                    <a href="index.html" class="active-link">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="read.html">
+                        Display Items
+                    </a>
+                </li>
+                <li>
+                    <a href="write.html">
+                        Add Item
+                    </a>
+                </li>
+                <li>
+                    <a href="update.html">
+                        Edit Item
+                    </a>
+                </li>
+                <li>
+                    <a href="delete.html">
+                        Delete Item
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="display-section">
+            <div class="display item">
+                <img src="img/product-img-placeholder.jpg" alt="product-img-placeholder">
+                <p>Product Name</p>
+                <p>Price</p>
+            </div>
+
+
+        </section>
+
+        <section class="side-bar-search">
+            <input type="text" placeholder="Search..">
+            <p>Filters +</p>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <aside class="crud-with-rtd">
+            <a href="read.html" class="read">read data from firebase RTB</a>
+            <a href="write.html" class="write">write data to firebase RTB</a>
+            <a href="update.html" class="update">update data in the firebase RTB</a>
+            <a href="delete.html" class="delete">delete data from firebase RTD</a>
+        </aside>
+    </footer>
+
 </body>
+
 </html>

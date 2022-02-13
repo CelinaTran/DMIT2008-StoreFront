@@ -1,0 +1,41 @@
+.display-section
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+    width: 50%;
+    height: 100%;
+
+    div
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+        height: 24%;
+        
+        Img
+        {
+            width: 100%;
+            height: 20rem;
+            margin-top: 2rem;
+
+        }
+
+        p
+        {
+            text-align: center;
+            margin-top: 0.5rem;
+            align-items: center;
+            height: 2rem;
+        }
+
+        p:last-child
+        {
+            background-color: #C4C4C4;
+        }
+    }
+    
+}

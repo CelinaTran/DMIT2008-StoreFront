@@ -10,7 +10,7 @@ The dashboard will contain at least an app bar, side bar and a widget display ar
 3. Product Image
 4. Product Title
 5. Product Price
-6. Review/colour options -- still deciding
+6. Sale Status
 
 ## References
 Images:
@@ -20,6 +20,7 @@ Images:
 - https://unsplash.com/photos/l_ZnbwOtYwU
 - https://www.pexels.com/photo/woman-standing-near-graffiti-wall-1689724/
 - https://www.shutterstock.com/image-vector/graffiti-spray-crown-icon-over-black-1998279665
+- https://unsplash.com/photos/8xznAGy4HcY
 
 
 Reference for layout:
