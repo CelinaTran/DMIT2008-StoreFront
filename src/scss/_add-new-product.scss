@@ -24,12 +24,15 @@
             height: 100%;
         }
 
-        button
+        label
         {
             position: relative;
-            background-color: rgbargba(255, 255, 255, 0.5);
-            left: 5.5rem;
-            top: 26rem;
+            left: 6.7rem;
+            bottom: 3rem;
+            border: #C4C4C4 solid;
+            border-radius: 0.3rem;
+            color: snow;
+            padding: 0.2rem 0.5rem;
         }
 
     }

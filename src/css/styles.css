@@ -605,12 +605,15 @@ main {
   width: 100%;
   height: 100%;
 }
-.add-new-product .product-image button,
-.product-details .product-image button {
+.add-new-product .product-image label,
+.product-details .product-image label {
   position: relative;
-  background-color: rgbargba(255, 255, 255, 0.5);
-  left: 5.5rem;
-  top: 26rem;
+  left: 6.7rem;
+  bottom: 3rem;
+  border: #C4C4C4 solid;
+  border-radius: 0.3rem;
+  color: snow;
+  padding: 0.2rem 0.5rem;
 }
 .add-new-product section div,
 .product-details section div {
