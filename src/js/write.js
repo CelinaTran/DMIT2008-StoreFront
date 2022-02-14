@@ -10,11 +10,16 @@ function onAddNewItem(event)
     const productName = event.target.elements['productName'].value.trim();
     const productPrice = event.target.elements['productPrice'].value;
     const productCategory = event.target.elements['productCategory'].value.trim();
-    const onSale = event.target.elements['onSale'].value;
+    const onSale = event.target.elements['onSale'];
+
+    if(onSale.value.checked)
+    {
+        console.log(checked);
+    }
 
     const dbCategory = `products/ ${productCategory}`;
 
-    const docRef = ref(db, dbCategory )
+    const docRef = ref(db, dbCategory)
 
     const newRef = push(docRef, 
         {

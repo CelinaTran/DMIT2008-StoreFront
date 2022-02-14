@@ -1,13 +1,14 @@
 import {db} from "../libs/firebase/firebaseConfig"
 import{ref, get} from "firebase/database"
 
-async function pageInit()
+async function getProductDetails()
 {
     const productRef = ref(db, 'products/');
-    const dataSnapShot = await get(productRef);
-    console.log(dataSnapShot.val());
+    const productSnapShot = await get(productRef);
+    console.log(productSnapShot.val());
+
 }
 
-pageInit();
+getProductDetails();
 
 //Getting data from the db
