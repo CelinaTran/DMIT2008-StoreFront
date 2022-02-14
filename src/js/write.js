@@ -1,57 +1,63 @@
 import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
-import {ref as databaseRef, push, set, get} from 'firebase/database'
-import { db, storage  } from "../libs/firebase/firebaseConfig";
+import { ref as databaseRef, push, set, get } from 'firebase/database'
+import { db, storage } from "../libs/firebase/firebaseConfig";
+import { nanoid } from "nanoid";
 
-function uploadImage(event) 
-{
+function uploadImage(event) {
     let image = event.target.files[0];
+    console.log(image)
 
     document.querySelector(".product-image img").src = URL.createObjectURL(image);
-
-    checkImageUpload(image);
 }
 
-async function checkImageUpload(image)
+async function uploadProductDetails() 
 {
-    const imageRef = storageRef(storage, image.name);
-    const confirmation = await uploadBytes(imageRef, image);
-    console.log(confirmation);
+    let category = document.querySelector('select').value;
+    const file = document.querySelector('#productImage').files[0];
+    const productName = document.querySelector('#productName').value.trim();
+    const productPrice = document.querySelector('#productPrice').value;
+    const productCategory = document.querySelector('#productCategory').value.trim();
+    const onSale = document.querySelector('#onSale').value;
+
+    if (onSale.checked) 
+    {
+        onSale.value = true;
+    }
+    else {
+        onSale.value = false;
+    }
+
+    const imageRef = storageRef(storage, `product/${category}/${image.name}`);
+    const dataRef = databaseRef(db, category);
+
+    const uploadResult = await uploadBytes(imageRef, file);
+    const imageUrl = await getDownloadURL(imageRef)
+    const storagePath = uploadResult.metadata.fullPath;
+    const itemRef = push(dataRef)
+
+    set(itemRef, {
+        key: itemRef.key,
+        sku: category+nanoid(),
+        imageUrl,
+        storagePath,
+        productName,
+        productPrice,
+        productCategory,
+        onSale
+    })
+
+    
+
 }
 
-
-function onAddNewItem(event)
-{
+function onAddNewItem(event) {
     event.preventDefault();
 
-    const productName = event.target.elements['productName'].value.trim();
-    const productPrice = event.target.elements['productPrice'].value;
-    const productCategory = event.target.elements['productCategory'].value.trim();
-    const Sale = event.target.elements['onSale'];
-
-    if(Sale.checked)
-    {
-        Sale.value = true;
-    }
-    else
-    {
-        Sale.value = false;
-    }
-
-    const dbCategory = `products/ ${productCategory}`;
-
-    const docRef = databaseRef(db, dbCategory)
-
-    const newRef = push(docRef, 
-        {
-            productName: productName,
-            price:productPrice,
-            category: productCategory,
-            sale:Sale
-            
-        })
+    uploadImage();
+    uploadProductDetails();
 
 }
 
 document.querySelector("#productImage").addEventListener("change", uploadImage);
 document.forms['addNewProductForm']
-        .addEventListener("submit", onAddNewItem);
+    .addEventListener("submit", onAddNewItem);
