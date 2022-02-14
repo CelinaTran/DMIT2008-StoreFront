@@ -1,14 +1,23 @@
-import {db} from "../libs/firebase/firebaseConfig"
-import{ref, get} from "firebase/database"
+import {db} from "../libs/firebase/firebaseConfig";
+import{ref, get} from "firebase/database";
 
+import{renderProductDisplay} from "./templates/productDisplay";
+
+
+let productDetailStorage = [];
 async function getProductDetails()
 {
     const productRef = ref(db, 'products/');
-    const productSnapShot = await get(productRef);
-    console.log(productSnapShot.val());
+    const productsSnapShot = await get(productRef);
+    const productDetails ={...productsSnapShot.val()};
+    const product = Object.keys(productDetails).map(product =>
+        {
+            return productDetails[product];
+        })
+
+    console.log(product);
 
 }
 
-getProductDetails();
 
-//Getting data from the db
+window.addEventListener('load', getProductDetails());
