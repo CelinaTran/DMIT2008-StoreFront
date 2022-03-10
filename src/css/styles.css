@@ -514,12 +514,14 @@ main {
   height: 50%;
 }
 .side-bar-crud ul li {
-  width: 14rem;
+  width: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 2rem;
   background-color: #C4C4C4;
+  border-radius: 0.3rem;
+  margin: 0 2rem;
 }
 .side-bar-crud ul a,
 .side-bar-crud ul a:visited {

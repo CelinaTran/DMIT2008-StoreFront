@@ -87,11 +87,9 @@
         <form id="addNewProductForm" class="product-details">
 
             <div class="product-image form-control">
-                <button type="button">
-                    Select Image
-                </button>
                 <img src="img/product-img-placeholder.jpg" alt="Placeholder" width="200px" height="300px">
-                <input type="file" id="rentalImage" style="display:none" class="select-file"
+                <label for="productImage">Select Image</label>
+                <input type="file" id="productImage" style="display:none" class="select-file"
                     accept=".jpg, .png, .jpeg, .webp">
 
             </div>
@@ -113,12 +111,12 @@
                         <option value="newArrivals">New Arrivals</option>
                         <option value="womens">Womens</option>
                         <option value="mens">Mens</option>
-                        <option value="sale">Sale</option>
+                        <option value="accessories">Accessories</option>
                     </select>
                 </div>
 
                 <div class="on-sale form-control">
-                    <label for="onSale">On Sale: </label>
+                    <label for="onSale">On Sale (Checked = On Sale): </label>
                     <input name="onSale" id="onSale" type="checkbox">
                 </div>
 
