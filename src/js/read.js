@@ -4,6 +4,7 @@ import {db} from "../libs/firebase/firebaseConfig";
 import {renderProductDisplay} from "../templates/productDisplayTemplate";
 
 console.log(db);
+console.log(renderProductDisplay());
 
 let productDetailStorage = [];
 async function getProductDetails()
