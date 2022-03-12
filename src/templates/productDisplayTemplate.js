@@ -1,7 +1,6 @@
-function renderProductDisplay(data)
+function renderProductDisplay(product = null)
 {
-    const productTemplate = 
-    `
+    const productTemplate = `
     <div class="display-item">        
         <img src="img/product-img-placeholder.jpg" alt="product-img-placeholder">
         <p>Product Name</p>

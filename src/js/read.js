@@ -1,21 +1,22 @@
+import {ref as dataRef, get, set, update} from 'firebase/database';
 import {db} from "../libs/firebase/firebaseConfig";
-import{ref, get} from "firebase/database";
 
-import{renderProductDisplay} from "../js/templates/productDisplay"
+import {renderProductDisplay} from "../templates/productDisplayTemplate";
 
+console.log(db);
 
 let productDetailStorage = [];
 async function getProductDetails()
 {
     const productRef = ref(db, 'products/');
     const productsSnapShot = await get(productRef);
-    const productDetails ={...productsSnapShot.val()};
-    const product = Object.keys(productDetails).map(product =>
+    const productData = productsSnapShot.val();
+    const productDisplayCard = Object.values(productData).map(product =>
         {
-            return productDetails[product];
+            console.log(product);
+            console.log(connected);
+            return null;
         })
-
-    console.log(product);
 
 }
 

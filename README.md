@@ -2,7 +2,7 @@
 In this assessment, you will find the loading interface for the storefront site where basic CRUD functionalities can be performed on the items displayed.
 
 # Practical Assessment 2
-In assessment #2 we add a login functionality and routing to each oage
+In assessment #2 we add a login functionality and routing to each page
 
 ## Dashboard
 The dashboard will contain at least an app bar, side bar and a widget display area for the products
