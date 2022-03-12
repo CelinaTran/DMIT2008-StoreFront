@@ -8,13 +8,13 @@ console.log(db);
 let productDetailStorage = [];
 async function getProductDetails()
 {
-    const productRef = ref(db, 'products/');
+    const productRef = dataRef(db, 'products/');
     const productsSnapShot = await get(productRef);
     const productData = productsSnapShot.val();
     const productDisplayCard = Object.values(productData).map(product =>
         {
             console.log(product);
-            console.log(connected);
+
             return null;
         })
 
