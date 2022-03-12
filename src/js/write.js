@@ -24,11 +24,11 @@ async function uploadProductDetails()
     let category;
     if(onSale == true)
     {
-        category = `Sale/${productCategory}`;
+        category = `products/sale/${productCategory}`;
     }
     else
     {
-        category = productCategory;
+        category = `products/ ${productCategory}`;
     }
     
     const dataRef= databaseRef(db, category);
@@ -45,6 +45,7 @@ async function uploadProductDetails()
         // storagePath,
         productName,
         productPrice,
+        productCategory,
         onSale
     })
 

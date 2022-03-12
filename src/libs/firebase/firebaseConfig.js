@@ -7,14 +7,15 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyAIIkUfKsKOaq2DlHJ1UCEp8syZJNA9Yco",
-    authDomain: "dmit2008-assessment-storefront.firebaseapp.com",
-    databaseURL: "https://dmit2008-assessment-storefront-default-rtdb.firebaseio.com",
-    projectId: "dmit2008-assessment-storefront",
-    storageBucket: "dmit2008-assessment-storefront.appspot.com",
-    messagingSenderId: "44376740558",
-    appId: "1:44376740558:web:15165d88aaff441c4d769f"
+const firebaseConfig = 
+{
+        apiKey: process.env.STOREFRONT_FIREBASE_API_KEY,
+        authDomain: process.env.STOREFRONT_FIREBASE_AUTH_DOMAIN,
+        databaseURL: process.env.STOREFRONT_FIREBASE_DATABASE_URL,
+        projectId: process.env.STOREFRONT_FIREBASE_PROJECT_ID,
+        storageBucket: process.env.STOREFRONT_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.STOREFRONT_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

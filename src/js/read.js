@@ -1,7 +1,7 @@
 import {db} from "../libs/firebase/firebaseConfig";
 import{ref, get} from "firebase/database";
 
-import{renderProductDisplay} from "./templates/productDisplay";
+import{renderProductDisplay} from "../js/templates/productDisplay"
 
 
 let productDetailStorage = [];
@@ -18,6 +18,5 @@ async function getProductDetails()
     console.log(product);
 
 }
-
 
 window.addEventListener('load', getProductDetails());
